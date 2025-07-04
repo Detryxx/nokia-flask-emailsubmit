@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Névjegyzék</title>
+</head>
+<body>
+    <h1>Névjegyzék</h1>
+    <form method="post">
+        Név: <input type="text" name="name" required><br>
+        Email: <input type="email" name="email" required><br>
+        <button type="submit">Hozzáadás</button>
+    </form>
+
+    <h2>Beküldött adatok:</h2>
+    <ul>
+        {% for c in contacts %}
+            <li>{{ c.name }} – {{ c.email }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
